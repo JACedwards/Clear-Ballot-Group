@@ -51,7 +51,4 @@ def cleanContests(file):
 
 cleanContests('contests.csv')
 
-#git test 2
 
-#This file comes before the others 
-#and git is tracking my changes

@@ -38,5 +38,3 @@ def cleanBallotMapper(file):
     except IOError:
         print("I/O error")
 
-#git test 2
-#git test view staged changes only
