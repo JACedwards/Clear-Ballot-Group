@@ -6,7 +6,8 @@ def cleanContests(file):
     with open(file, mode='r') as csv_file:
         csv_reader = csv.DictReader(csv_file)
         lst_dict = list(csv_reader)
-    
+
+   
     #Identifies duplicated record
     stack = []
     dup = []
@@ -33,17 +34,19 @@ def cleanContests(file):
             continue
 
     #Writes Python dictionary to new csv file
-    csv_columns = ['ContestID','ContestName', 'ContestShortName', 'ContestFullName','VoteRule', 'ContestType']
 
-    csv_file = "Contests_Output.csv"
-    try:
-        with open(csv_file, 'w', newline='') as csvfile:
-            writer = csv.DictWriter(csvfile, fieldnames=csv_columns)
-            writer.writeheader()
-            for data in lst_dict:
-                writer.writerow(data)
-    except IOError:
-        print("I/O error")
-    return il_id
+    #commented out for testing related to bird on the brain
+    # csv_columns = ['ContestID','ContestName', 'ContestShortName', 'ContestFullName','VoteRule', 'ContestType']
 
+    # csv_file = "Contests_Output.csv"
+    # try:
+    #     with open(csv_file, 'w', newline='') as csvfile:
+    #         writer = csv.DictWriter(csvfile, fieldnames=csv_columns)
+    #         writer.writeheader()
+    #         for data in lst_dict:
+    #             writer.writerow(data)
+    # except IOError:
+    #     print("I/O error")
+    # return il_id
 
+cleanContests('contests.csv')
