@@ -50,3 +50,5 @@ def cleanContests(file):
     # return il_id
 
 cleanContests('contests.csv')
+
+#git test 2
